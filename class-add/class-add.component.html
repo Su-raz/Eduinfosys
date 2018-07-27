@@ -1,18 +1,18 @@
 <div class="container">
-  <h1>create single Payment</h1>
+  <h1>Add class</h1>
   <div class="row">
     <div class="col-md-8" >
-      <form (ngSubmit)="savePayment()" #paymentForm="ngForm">
+      <form (ngSubmit)="saveClass()" #ClassForm="ngForm">
          <div class="input-group">
                          <div class="col-sm-3">
                             <div class="form-group">
-                                     <label for="email_address_2">Student Id</label>
+                                     <label for="email_address_2">Class Name</label>
                             </div>
                         </div>
                         <div class="col-md-9">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" class="form-control"[(ngModel)]="payment.student_id"  name="Student id"   required >
+                                    <input type="" class="form-control"[(ngModel)]="_class.name"  name="name"   placeholder="Enter Class Name" required >
                                 </div>
                             </div>
                          </div>
@@ -21,13 +21,13 @@
          <div class="input-group">
                          <div class="col-sm-3">
                             <div class="form-group">
-                                     <label for="email_address_2">Pay Amount</label>
+                                     <label for="email_address_2">Maximum Capicity</label>
                             </div>
                         </div>
                         <div class="col-md-9">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="number" class="form-control"[(ngModel)]="payment.pay_amount"  name="Pay_amount" required >
+                                    <input type="number" class="form-control"[(ngModel)]="_class.max_capacity"  name="max_capacity" placeholder="Enter total capacity" required >
                                 </div>
                             </div>
                          </div>
@@ -41,14 +41,15 @@
                         <div class="col-md-9">
                             <div class="form-group">
                                 <div class="form-line">
-                                    <input type="text" class="form-control"[(ngModel)]="payment.description"  name="Description"  required >
+                                    <input type="text" class="form-control"[(ngModel)]="_class.description"  name="mother_name"   placeholder="Enter description " required >
                                 </div>
                             </div>
                          </div>
                     </div>
+     
  
         <div class="form-group">
-          <button type="submit" class="btn btn-success" [disabled]="!paymentForm.form.valid">Add Invoice </button>
+          <button type="submit" class="btn btn-success" [disabled]="!ClassForm.form.valid" > Save </button>
         </div>
       </form>
     </div>

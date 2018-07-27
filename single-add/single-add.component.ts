@@ -17,8 +17,8 @@ payment={user:{}};
   	}
   	savePayment(){
 
-  		this.http.post('http://192.168.1.77/payment/', this.payment).suscribe(res =>{
-  			let id =res['id '];
+  		this.http.post('http://192.168.1.77/payment/', this.payment).subscribe(res =>{
+  			let id =res['id'];
   			this.router.navigate(['/single-add', id]);
   	 }, (err) => {
           console.log(err);
